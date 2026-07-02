@@ -1,0 +1,68 @@
+# ========== CLion / JetBrains IDE ==========
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+
+# ========== CMake 构建产物 ==========
+cmake-build-*/
+build/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# ========== C++ 编译产物 ==========
+# 对象文件
+*.o
+*.obj
+*.ko
+*.elf
+
+# 预编译头
+*.gch
+*.pch
+
+# 动态库
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# 静态库
+*.la
+*.lo
+*.a
+*.lib
+
+# 可执行文件
+*.exe
+*.out
+*.app
+
+# 调试符号
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# ========== 操作系统 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== 其他常见文件 ==========
+*.log
+*.tmp
+*.swp
+*.swo
+*~
