@@ -1,53 +1,30 @@
-# ========== CLion / JetBrains IDE ==========
-.idea/
-*.iml
-*.iws
-*.ipr
-*.ids
-*.orig
-
-# ========== CMake 构建产物 ==========
-cmake-build-*/
-build/
-out/
-CMakeCache.txt
-CMakeFiles/
-CMakeScripts/
-Testing/
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps/
-
-# ========== C++ 编译产物 ==========
-# 对象文件
-*.o
-*.obj
-*.ko
-*.elf
-
-# 预编译头
-*.gch
-*.pch
-
-# 动态库
-*.so
-*.so.*
-*.dylib
-*.dll
-
-# 静态库
-*.la
-*.lo
-*.a
-*.lib
-
-# 可执行文件
+cd ~/share
+cat > .gitignore << 'EOF'
+# 编译产物
 *.exe
 *.out
-*.app
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# CMake / Makefile 构建目录
+cmake-build-*/
+build/
+build-*/
+out/
+bin/
+lib/
+
+# IDE 配置
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
 
 # 调试符号
 *.dSYM/
@@ -55,14 +32,19 @@ _deps/
 *.idb
 *.pdb
 
-# ========== 操作系统 ==========
-.DS_Store
-Thumbs.db
-desktop.ini
+# 依赖管理
+vcpkg_installed/
+conanbuildinfo.*
+conan.lock
 
-# ========== 其他常见文件 ==========
+# 日志与临时文件
 *.log
 *.tmp
-*.swp
-*.swo
-*~
+*.temp
+.DS_Store
+Thumbs.db
+
+# 测试数据
+*.csv
+*.dat
+._*
