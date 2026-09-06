@@ -48,3 +48,6 @@ Thumbs.db
 *.csv
 *.dat
 ._*
+network/cTcpClient
+network/cTcpServer
+multiThread/test_thread_pool

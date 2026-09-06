@@ -14,18 +14,11 @@ include_directories(${MYSQL_INCLUDE_DIRS})
 
 add_executable(main
         main.cpp
-        multiThread/thread_pool.cpp
+        multiThread/src/thread_pool_modern.cpp
         MYSQL/connection_pool.cpp
-)
-
-add_executable(main_modern
-        main_modern.cpp
-        multiThread/thread_pool_modern.cpp
-        multiThread/thread_pool_modern.h
-        MYSQL/connection_pool_modern.cpp
-        MYSQL/connection_pool_modern.h
+        network/cTcpClient.cpp
+        network/cTcpServer.cpp
 )
 
 # 链接 MySQL 库
 target_link_libraries(main ${MYSQL_LIBRARIES})
-target_link_libraries(main_modern ${MYSQL_LIBRARIES})
