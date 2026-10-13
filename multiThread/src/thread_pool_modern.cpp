@@ -1,5 +1,5 @@
 #include "thread_pool_modern.h"
-#include "blocking_queue.h" // 完整定义只出现在 .cpp，对头文件使用者不可见
+#include "BlockingQueue.h" // 完整定义只出现在 .cpp，对头文件使用者不可见
 
 ThreadPool::ThreadPool(size_t threads_num)
     : task_queue_(std::make_unique<BlockingQueue<std::function<void()>>>())
