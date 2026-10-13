@@ -51,3 +51,4 @@ Thumbs.db
 network/cTcpClient
 network/cTcpServer
 multiThread/test_thread_pool
+.obsidian/
